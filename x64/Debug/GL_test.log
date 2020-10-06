@@ -1,0 +1,7 @@
+﻿  main.cpp
+D:\code_basket\c\three_dim\GL_test\main.cpp(19,40): warning C4305: “参数”: 从“double”到“float”截断
+  Mesh.cpp
+  shader.cpp
+D:\code_basket\c\three_dim\GL_test\shader.cpp(77,45): warning C4267: “=”: 从“size_t”转换到“GLint”，可能丢失数据
+  正在生成代码...
+  GL_test.vcxproj -> D:\code_basket\c\three_dim\x64\Debug\GL_test.exe
