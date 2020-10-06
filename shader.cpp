@@ -19,6 +19,7 @@ Shader::Shader(const string& filename) {
 	CheckShaderError(m_pramram, GL_LINK_STATUS, true, "Error:Progma Linking invalid");
 	glValidateProgram(m_pramram);
 	CheckShaderError(m_pramram, GL_VALIDATE_STATUS, true, "Error:Progma Validate invalid");
+	m_unifroms[TRANSFROM_U] = glGetUniformLocation(m_pramram, "transform");
 }
 Shader::~Shader() {
 	for (unsigned int i = 0; i < NUM_SHADER; i++) {
@@ -30,6 +31,11 @@ Shader::~Shader() {
 
 void Shader::Bind() {
 	glUseProgram(m_pramram);
+}
+void Shader::Update(const Transform& transform) {
+	mat4 model = transform.GetModel();
+	glUniformMatrix4fv(m_unifroms[TRANSFROM_U], 1, GL_FALSE, &model[0][0]);
+
 }
 static void CheckShaderError(GLuint shader, GLuint flag, bool isprogram, const string& errorMessage) {
 	GLint success = 0;
