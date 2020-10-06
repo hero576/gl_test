@@ -3,13 +3,14 @@
 #include <string>
 #include <gl/glew.h>
 #include "Transform.h"
+#include "Camera.h"
 using namespace std;
 class Shader {
 public:
 	Shader(const string& filename);
 	~Shader();
 	void Bind();
-	void Update(const Transform& transform);
+	void Update(const Transform& transform,const Camera& camera);
 private:
 	enum {
 		TRANSFROM_U,

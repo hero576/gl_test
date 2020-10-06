@@ -32,8 +32,8 @@ Shader::~Shader() {
 void Shader::Bind() {
 	glUseProgram(m_pramram);
 }
-void Shader::Update(const Transform& transform) {
-	mat4 model = transform.GetModel();
+void Shader::Update(const Transform& transform, const Camera& camera) {
+	mat4 model = camera.GetViewProjection()*transform.GetModel();
 	glUniformMatrix4fv(m_unifroms[TRANSFROM_U], 1, GL_FALSE, &model[0][0]);
 
 }

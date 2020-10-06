@@ -20,6 +20,7 @@
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Display.h">
@@ -33,6 +34,7 @@
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="texture.h" />
     <ClInclude Include="Transform.h" />
+    <ClInclude Include="Camera.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GL_test.rc">
