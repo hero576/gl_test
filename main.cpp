@@ -25,12 +25,13 @@ int main(int argc, char** argv) {
     Shader shader("./res/basicShader");
     Texture texture("./res/brick.jfif");
     Transform transform;
-    Camera camera(vec3(0., 0., -3), 70.0f, (float)WIDTH/(float)HEIGHT,0.01,1000);
+    Camera camera(vec3(0., 0., -4), 70.0f, (float)WIDTH/(float)HEIGHT,0.01,1000);
     float counter = 0.;
     while (!display.IsClosed()) {
         display.Clear(0., 0.15, 0.3, 1.);
         float sinCounter = sinf(counter);
         transform.GetPos()->x = sinCounter;
+        transform.GetRot()->x = counter;
         shader.Bind();
         texture.Bind();
         shader.Update(transform, camera);

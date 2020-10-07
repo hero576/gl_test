@@ -10,9 +10,6 @@
     <ClCompile Include="main.cpp">
       <Filter>资源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Display.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texture.cpp" />
@@ -20,11 +17,9 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="obj_loader.cpp" />
+    <ClCompile Include="Display.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Display.h">
-      <Filter>资源文件</Filter>
-    </ClInclude>
     <ClInclude Include="shader.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stb_image.h" />
@@ -33,6 +28,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="obj_loader.h" />
+    <ClInclude Include="Display.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GL_test.rc">
