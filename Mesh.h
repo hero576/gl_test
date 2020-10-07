@@ -1,6 +1,9 @@
 #pragma once
 #include <glm/glm.hpp>
 #include <GL/glew.h>
+#include<string>
+#include "obj_loader.h"
+using namespace std;
 class Vertex {
 public:
     Vertex(const glm::vec3& pos,const glm::vec2& texCoord){
@@ -15,16 +18,19 @@ private:
 };
 class Mesh {
 public:
-    Mesh(Vertex* vertices, unsigned int numvertices);
+    Mesh(Vertex* vertices, unsigned int numVertices, unsigned int* indices, unsigned int numIndices);
+    Mesh(const string& filename);
     ~Mesh();
     void Draw();
 private:
     enum {
         POSITION_VB,
         TextCOORD_VB,
+        INDEX_VB,
         NUM_BUFFERS
     };
     GLuint m_vertexArrayObject;
     GLuint m_vertexArrayBuffer[NUM_BUFFERS];
     unsigned int m_drawCount;
+    void InitMesh(const IndexedModel& model);
 };

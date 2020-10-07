@@ -1,7 +1,4 @@
 ﻿  main.cpp
-D:\code_basket\c\three_dim\GL_test\main.cpp(24,81): warning C4305: “参数”: 从“double”到“float”截断
-D:\code_basket\c\three_dim\GL_test\main.cpp(27,40): warning C4305: “参数”: 从“double”到“float”截断
-  shader.cpp
-D:\code_basket\c\three_dim\GL_test\shader.cpp(83,45): warning C4267: “=”: 从“size_t”转换到“GLint”，可能丢失数据
-  正在生成代码...
+D:\code_basket\c\three_dim\GL_test\main.cpp(28,81): warning C4305: “参数”: 从“double”到“float”截断
+D:\code_basket\c\three_dim\GL_test\main.cpp(31,40): warning C4305: “参数”: 从“double”到“float”截断
   GL_test.vcxproj -> D:\code_basket\c\three_dim\x64\Debug\GL_test.exe
