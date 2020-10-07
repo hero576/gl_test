@@ -4,17 +4,21 @@
 #include<string>
 #include "obj_loader.h"
 using namespace std;
+using namespace glm;
 class Vertex {
 public:
-    Vertex(const glm::vec3& pos,const glm::vec2& texCoord){
+    Vertex(const vec3& pos,const vec2& texCoord,const vec3 normal=vec3()){
         this->pos = pos;
         this->texCoord = texCoord;
+        this->normal = normal;
     };
-    inline glm::vec3* GetPos() { return &pos; };
-    inline glm::vec2* GetTexCoord() { return &texCoord; };
+    inline vec3* GetPos() { return &pos; };
+    inline vec2* GetTexCoord() { return &texCoord; };
+    inline vec3* GetNormal() { return &normal; };
 private:
-    glm::vec3 pos;
-    glm::vec2 texCoord;
+    vec3 pos;
+    vec2 texCoord;
+    vec3 normal;
 };
 class Mesh {
 public:
@@ -26,6 +30,7 @@ private:
     enum {
         POSITION_VB,
         TextCOORD_VB,
+        NORMAL_VB,
         INDEX_VB,
         NUM_BUFFERS
     };

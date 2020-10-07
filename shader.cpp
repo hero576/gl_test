@@ -15,6 +15,7 @@ Shader::Shader(const string& filename) {
 	}
 	glBindAttribLocation(m_pramram, 0, "position");
 	glBindAttribLocation(m_pramram, 1, "texCoord");
+	glBindAttribLocation(m_pramram, 2, "normal");
 	glLinkProgram(m_pramram);
 	CheckShaderError(m_pramram, GL_LINK_STATUS, true, "Error:Progma Linking invalid");
 	glValidateProgram(m_pramram);
